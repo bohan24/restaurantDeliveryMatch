@@ -2,6 +2,14 @@ using Newtonsoft.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// builder.Services.AddSingleton(session_store);
+builder.Services.AddControllers().AddNewtonsoftJson(option =>
+{
+    //加入Newtonsoft.Json.Serialization;這行 才能讓 前端傳過來的 JSON 都自動序列化
+    option.SerializerSettings.ContractResolver = new DefaultContractResolver();
+});
+
+
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -18,12 +26,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-// builder.Services.AddSingleton(session_store);
-builder.Services.AddControllers().AddNewtonsoftJson(option =>
-{
-    //加入Newtonsoft.Json.Serialization;這行 才能讓 前端傳過來的 JSON 都自動序列化
-    option.SerializerSettings.ContractResolver = new DefaultContractResolver();
-});
 
 app.UseHttpsRedirection();
 
