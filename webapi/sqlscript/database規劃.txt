@@ -1,5 +1,8 @@
 ﻿資料庫規劃: 
 
+資料庫使用 postgreSQL免安裝載點 : https://github.com/pgsql-tw/portable-pgsql 
+可以使用免安裝版的方式跑開發資料庫
+
 資料表開頭大寫 欄位駝峰
 
 會員表(會員分級 可停用)
