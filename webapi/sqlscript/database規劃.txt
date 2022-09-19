@@ -7,8 +7,19 @@
 
 會員表(會員分級 可停用)
 Member
+  Id uuid,varchar(50),PrimaryKEY,
+  name,varchar(50),null,
+  email,varchar(200),null,
+  account,varchar(500),
+  password,varchar(4000),
+  isAuth,bool,1登入，0登出,default(0),
+  lineUid,varchar(200),null,
+  isUse,bool,1使用，2停用,default(1),
+  createDate,datetime,
+  deleteDate,datetime,
+  upadteDate,datetime
 
-廠商表 
+廠商表 v
 Admin
 
 訂單表 (可消取功能)
