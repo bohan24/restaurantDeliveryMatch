@@ -16,11 +16,20 @@ Member
   lineUid,varchar(200),null,
   isUse,bool,1使用，2停用,default(1),
   createDate,datetime,
-  deleteDate,datetime,
-  upadteDate,datetime
+  deleteDate,datetime,null
+  upadteDate,datetime,null
 
 廠商表 v
 Admin
+  Id uuid,varchar(50),Primarykey,
+  name,varchar(200),null
+  number,varchar(8),備註:統一編號,null
+  address,varchar(500),null
+  category,int,備註:服務類型,
+  isUse,bool,1使用，2停用,default(1),
+  createDate,datetime,
+  deleteDate,datetime,null
+  upadteDate,datetime,null
 
 訂單表 (可消取功能)
 Order
