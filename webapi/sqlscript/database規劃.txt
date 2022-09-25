@@ -20,12 +20,27 @@ Member
   upadteDate,datetime,null
 
 廠商表 v
-Admin
+Client
   Id uuid,varchar(50),Primarykey,
   name,varchar(200),null
   number,varchar(8),備註:統一編號,null
   address,varchar(500),null
   category,int,備註:服務類型,
+  isUse,bool,1使用，2停用,default(1),
+  createDate,datetime,
+  deleteDate,datetime,null
+  upadteDate,datetime,null
+  
+廠商管理員表 
+Admin
+  Id uuid,varchar(50),PrimaryKEY,
+  clientId,varchar(50),
+  name,varchar(50),null,
+  email,varchar(200),null,
+  account,varchar(500),
+  password,varchar(4000),
+  isAuth,bool,1登入，0登出,default(0),
+  lineUid,varchar(200),null,
   isUse,bool,1使用，2停用,default(1),
   createDate,datetime,
   deleteDate,datetime,null
