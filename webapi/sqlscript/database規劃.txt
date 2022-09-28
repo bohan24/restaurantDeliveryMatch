@@ -45,7 +45,12 @@ Admin
   createDate,datetime,
   deleteDate,datetime,null
   upadteDate,datetime,null
-
+ 
+權限類型 
+Premission
+  Id uuid,varchar(50),PrimaryKEY,  
+  name,varchar(50),null,
+  isUse,bool,1使用，2停用,default(1)
 訂單表 (可消取功能)
 Order
 
