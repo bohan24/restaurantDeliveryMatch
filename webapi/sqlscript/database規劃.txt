@@ -53,6 +53,19 @@ Premission
   isUse,bool,1使用，2停用,default(1)
 訂單表 (可消取功能)
 Order
+    Id uuid,varchar(50),PrimaryKEY,
+    clientId,varchar(50),
+    productId,text, 備註:陣列
+    memberId,varchar(50),
+    deliveryId,varchar(50),
+    price,text, 備註:陣列
+    total,int, 備註:總金額
+    paymentId,varchar(50), 備註:付款方式
+    address,varchar(255), 取貨地址
+    pickerTime,datetime,
+    createDate,datetime,
+    updatedDate,datetime,null,
+    deletedDate,datetime,null
 
 產品表 (通常每個系統產品表不一樣)
 Product
