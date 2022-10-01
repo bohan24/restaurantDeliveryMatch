@@ -41,6 +41,7 @@ Admin
   password,varchar(4000),
   isAuth,bool,1登入，0登出,default(0),
   lineUid,varchar(200),null,
+  payment,text, 備註:陣列
   isUse,bool,1使用，2停用,default(1),
   createDate,datetime,
   deleteDate,datetime,null
@@ -51,6 +52,7 @@ Premission
   Id uuid,varchar(50),PrimaryKEY,  
   name,varchar(50),null,
   isUse,bool,1使用，2停用,default(1)
+  
 訂單表 (可消取功能)
 Order
     Id uuid,varchar(50),PrimaryKEY,
@@ -66,9 +68,24 @@ Order
     createDate,datetime,
     updatedDate,datetime,null,
     deletedDate,datetime,null
-
+    
+支付選項
+Payment
+    Id uuid,varchar(50),PrimaryKEY,
+    name,varchar(50),null,
+    isUse,bool,1使用，2停用,default(1)
+    
 產品表 (通常每個系統產品表不一樣)
 Product
+    Id uuid,varchar(50),PrimaryKEY,
+    name,varchar(50),null,
+    adminId,varchar(50),
+    Introduction,text, 備註:產品說明,
+    category,varchar(50),
+    price,int, 備註:商品單價
+    createDate,datetime,
+    updatedDate,datetime,null,
+    deletedDate,datetime,null
 
 系統設定表(排程時間預定 系統規格 之類設定)
 SystemConfig
