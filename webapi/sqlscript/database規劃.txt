@@ -92,3 +92,14 @@ SystemConfig
 
 外送員表
 DeliveryMan
+ Id uuid,varchar(50),PrimaryKEY,
+  name,varchar(50),null,
+  email,varchar(200),null,
+  account,varchar(500),
+  password,varchar(4000),
+  isAuth,bool,1登入，0登出,default(0),
+  lineUid,varchar(200),null,
+  isUse,bool,1使用，2停用,default(1),
+  createDate,datetime,
+  deleteDate,datetime,null
+  upadteDate,datetime,null
