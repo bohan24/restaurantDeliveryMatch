@@ -90,6 +90,18 @@ Product
 系統設定表(排程時間預定 系統規格 之類設定)
 SystemConfig
 
+優惠設定表
+coupon
+    Id uuid,varchar(50),PrimaryKEY,
+    name,varchar(50),null,
+    code,varchar(255),null,
+    Member,varchar(50),null,
+    deadline,datetime,null,
+    rule,text,null,備註:json格式,
+    createDate,datetime,
+    updatedDate,datetime,null,
+    deletedDate,datetime,null
+
 外送員表
 DeliveryMan
  Id uuid,varchar(50),PrimaryKEY,
