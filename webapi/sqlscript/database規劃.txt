@@ -49,7 +49,7 @@ Admin
  
 權限類型 
 Premission
-  Id uuid,varchar(50),PrimaryKEY,  
+  Id int,PrimaryKEY,  
   name,varchar(50),null,
   isUse,bool,1使用，2停用,default(1)
   
