@@ -11,6 +11,7 @@ Member
   name,varchar(50),null,
   email,varchar(200),null,
   account,varchar(500),
+  isDelivery,bool,1是外送員，2非外送員,default(0),
   password,varchar(4000),
   isAuth,bool,1登入，0登出,default(0),
   lineUid,varchar(200),null,
@@ -60,8 +61,9 @@ Order
     productId,text, 備註:陣列
     memberId,varchar(50),
     deliveryId,varchar(50),
-    price,text, 備註:陣列
-    total,int, 備註:總金額
+    price,text, 備註:陣列,
+    joiner,text,備註:團購人名稱,
+    total,decimal, 備註:總金額
     paymentId,varchar(50), 備註:付款方式
     address,varchar(255), 取貨地址
     pickerTime,datetime,
@@ -71,7 +73,7 @@ Order
     
 支付選項
 Payment
-    Id uuid,varchar(50),PrimaryKEY,
+    Id int,PrimaryKEY,
     name,varchar(50),null,
     isUse,bool,1使用，2停用,default(1)
     
@@ -83,6 +85,8 @@ Product
     Introduction,text, 備註:產品說明,
     category,varchar(50),
     price,int, 備註:商品單價
+    qty,decimal,
+    isUse,int, 備註:1:啟用;2:停用,
     createDate,datetime,
     updatedDate,datetime,null,
     deletedDate,datetime,null
@@ -98,11 +102,12 @@ coupon
     Member,varchar(50),null,
     deadline,datetime,null,
     rule,text,null,備註:json格式,
+    isUse,bool,1使用，2停用,default(1),
     createDate,datetime,
     updatedDate,datetime,null,
     deletedDate,datetime,null
 
-外送員表
+/*外送員表
 DeliveryMan
  Id uuid,varchar(50),PrimaryKEY,
   name,varchar(50),null,
@@ -114,4 +119,4 @@ DeliveryMan
   isUse,bool,1使用，2停用,default(1),
   createDate,datetime,
   deleteDate,datetime,null
-  upadteDate,datetime,null
+  upadteDate,datetime,null*/
