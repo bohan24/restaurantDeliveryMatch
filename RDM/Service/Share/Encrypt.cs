@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace Wallet.Service.Util
+namespace RDM.Service.Util
 {
     public class Encrypt
     {

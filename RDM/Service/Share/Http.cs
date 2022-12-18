@@ -4,7 +4,7 @@ using System.Net;
 using System.Text;
 using System.Web;
 
-namespace Wallet.Service.Util
+namespace RDM.Service.Util
 {
     public class Http
     {

@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 
-namespace Wallet.Service.Util
+namespace RDM.Service.Util
 {
     public class CacheService 
     {

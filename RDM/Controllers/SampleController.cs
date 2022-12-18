@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace webapi.Controllers
+namespace RDM.Controllers
 {
     public class SampleController : Controller
     {

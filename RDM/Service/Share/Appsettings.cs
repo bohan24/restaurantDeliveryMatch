@@ -1,4 +1,4 @@
-﻿namespace Schedule.Service.Util
+﻿namespace RDM.Service.Util
 {
     public class Appsettings
     {

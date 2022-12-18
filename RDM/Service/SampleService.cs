@@ -1,6 +1,6 @@
 ﻿using Dapper;
 
-namespace webapi.Service
+namespace RDM.Service
 {
     public class SampleService
     {

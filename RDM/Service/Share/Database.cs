@@ -4,7 +4,7 @@ using Npgsql;
 using System.Data;
 using System.Text;
 
-namespace webapi.Service
+namespace RDM.Service
 {
     public class Database
     {
